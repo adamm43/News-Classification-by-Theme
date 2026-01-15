@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Classifier — Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">📰 News Classifier</div>
+            <div class="controls">
+                <button id="clearHistory" class="btn small">🗑️ Effacer l'historique</button>
+                <button id="exportHistory" class="btn small">⬇ Export</button>
+            </div>
+            <div class="footer-note">Local • Demo</div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main">
+            <header class="main-header">
+                <h1>Classification Chat</h1>
+                <label class="theme-toggle">
+                    <input id="themeToggle" type="checkbox">
+                    <span>🌙</span>
+                </label>
+            </header>
+
+            <section class="chat" id="chatBox">
+                <!-- Messages dynamiques -->
+            </section>
+
+            <footer class="composer">
+                <textarea id="textInput" placeholder="Collez un article ici..." rows="2"></textarea>
+                <div class="actions">
+                    <div id="loading" class="hidden">⏳ Analyse...</div>
+                    <button id="sendBtn" class="btn primary">🔎 Classifier</button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Templates -->
+    <template id="tplUser">
+        <div class="msg user">
+            <div class="bubble"></div>
+        </div>
+    </template>
+
+    <template id="tplBot">
+        <div class="msg bot">
+            <div class="bubble"></div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
